@@ -2,16 +2,18 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X, Briefcase } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Job Seekers', href: '#jobs' },
+    { name: 'Job Seekers', href: '/job-seekers' },
     { name: 'Employers', href: '#services' },
-    { name: 'Current Openings', href: '#jobs' },
+    { name: 'Current Openings', href: '/current-openings' },
     { name: 'About Us', href: '#about' },
   ];
 
@@ -42,7 +44,11 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="px-3 lg:px-4 py-2 text-sm lg:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
+                className={`px-3 lg:px-4 py-2 text-sm lg:text-base font-medium rounded-lg transition-all duration-200 ${
+                  pathname === link.href 
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                }`}
               >
                 {link.name}
               </Link>
@@ -65,7 +71,11 @@ export default function Header() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="px-4 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
+                  className={`px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
+                    pathname === link.href 
+                      ? 'text-blue-600 bg-blue-50' 
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                  }`}
                 >
                   {link.name}
                 </Link>
@@ -73,7 +83,11 @@ export default function Header() {
               <Link
                 href="#contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="mx-4 mt-2 px-4 py-4 bg-blue-500 text-white text-base font-semibold rounded-lg hover:bg-blue-600 transition-all duration-200 text-center shadow-sm"
+                className={`mx-4 mt-2 px-4 py-4 bg-blue-500 text-white text-base font-semibold rounded-lg hover:bg-blue-600 transition-all duration-200 text-center shadow-sm ${
+                  pathname === '#contact' 
+                    ? 'bg-blue-600' 
+                    : ''
+                }`}
               >
                 Contact Us
               </Link>

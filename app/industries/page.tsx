@@ -4,38 +4,6 @@ import Footer from '../../components/Footer';
 export default function IndustriesPage() {
   const industries = [
     {
-      name: 'Food and Beverage',
-      image: '/food-beverage.webp',
-    },
-    {
-      name: 'Pharmaceuticals',
-      image: '/pharmaceuticals.webp',
-    },
-    {
-      name: 'Manufacturing',
-      image: '/manufacturing.webp',
-    },
-    {
-      name: 'Packaging',
-      image: '/packaging.webp',
-    },
-    {
-      name: 'Warehousing',
-      image: '/warehousing.webp',
-    },
-    {
-      name: 'Cosmetics',
-      image: '/cosmetics.webp',
-    },
-    {
-      name: 'Automobiles',
-      image: '/automobiles.webp',
-    },
-    {
-      name: 'Retail',
-      image: '/retail.webp',
-    },
-    {
       name: 'General Labour',
       image: '/general.webp',
     },
@@ -58,14 +26,6 @@ export default function IndustriesPage() {
     {
       name: 'Bakery Workers',
       image: '/backery.webp',
-    },
-    {
-      name: 'Construction',
-      image: '/construction.webp',
-    },
-    {
-      name: 'Healthcare',
-      image: '/healthcare.webp',
     },
   ];
 

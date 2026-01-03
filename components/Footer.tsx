@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 mb-8">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4 group">
               <span className="text-xl font-bold text-white">
@@ -134,7 +134,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0" />
-                <a href="mailto:farook@theonestoprecruitment.com" className="hover:text-blue-400 transition-colors break-all text-xs">
+                <a href="mailto:farook@theonestoprecruitment.com" className="hover:text-blue-400 transition-colors break-all sm:text-xs md:text-sm">
                   farook@theonestoprecruitment.com
                 </a>
               </li>

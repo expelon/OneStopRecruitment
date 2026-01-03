@@ -1,4 +1,5 @@
 import JobCard from './JobCard';
+import Link from 'next/link';
 
 export default function JobListings() {
   const jobs = [
@@ -75,9 +76,12 @@ export default function JobListings() {
         </div>
 
         <div className="text-center mt-12">
-          <button className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
+          <Link
+            href="/current-openings"
+            className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+          >
             View More
-          </button>
+          </Link>
         </div>
       </div>
     </section>

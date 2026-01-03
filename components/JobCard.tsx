@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 interface JobCardProps {
   title: string;
@@ -16,10 +17,13 @@ export default function JobCard({ title, description }: JobCardProps) {
       <p className="text-gray-600 mb-4 line-clamp-2 leading-relaxed">{description}</p>
 
       
-      <button className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border border-yellow-500 text-yellow-500 font-semibold rounded-lg hover:border-black hover:text-black transition-all duration-200 group-hover:border-black group-hover:text-black">
+      <Link
+        href="/current-openings"
+        className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border border-yellow-500 text-yellow-500 font-semibold rounded-lg hover:border-black hover:text-black transition-all duration-200 group-hover:border-black group-hover:text-black"
+      >
         View Details
         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-      </button>
+      </Link>
     </div>
   );
 }
