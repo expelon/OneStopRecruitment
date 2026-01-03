@@ -14,7 +14,7 @@ export default function Header() {
     { name: 'Job Seekers', href: '/job-seekers' },
     { name: 'Employers', href: '#services' },
     { name: 'Current Openings', href: '/current-openings' },
-    { name: 'About Us', href: '#about' },
+    { name: 'About Us', href: '/about-us' },
   ];
 
   return (

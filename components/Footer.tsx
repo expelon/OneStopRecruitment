@@ -57,7 +57,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#jobs" className="hover:text-blue-400 transition-colors">
+                <Link href="/job-seekers" className="hover:text-blue-400 transition-colors">
                   Job Seekers
                 </Link>
               </li>
@@ -67,12 +67,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#jobs" className="hover:text-blue-400 transition-colors">
+                <Link href="/current-openings" className="hover:text-blue-400 transition-colors">
                   Current Openings
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="hover:text-blue-400 transition-colors">
+                <Link href="/about-us" className="hover:text-blue-400 transition-colors">
                   About Us
                 </Link>
               </li>
