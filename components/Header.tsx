@@ -56,7 +56,7 @@ export default function Header() {
           </div>
 
           <Link
-            href="#contact"
+            href="/contact-us"
             className="hidden md:flex px-4 lg:px-6 py-3 bg-blue-500 text-white text-sm lg:text-base font-semibold rounded-lg hover:bg-blue-600 transition-all duration-200 shadow-sm hover:shadow-md"
           >
             Contact Us
@@ -81,10 +81,10 @@ export default function Header() {
                 </Link>
               ))}
               <Link
-                href="#contact"
+                href="/contact-us"
                 onClick={() => setIsMenuOpen(false)}
                 className={`mx-4 mt-2 px-4 py-4 bg-blue-500 text-white text-base font-semibold rounded-lg hover:bg-blue-600 transition-all duration-200 text-center shadow-sm ${
-                  pathname === '#contact' 
+                  pathname === '/contact-us' 
                     ? 'bg-blue-600' 
                     : ''
                 }`}

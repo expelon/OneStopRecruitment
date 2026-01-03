@@ -188,12 +188,6 @@ export default function AboutUsPage() {
               >
                 Find Talent
               </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-200 border-2 border-blue-600"
-              >
-                Contact Us
-              </a>
             </div>
           </div>
         </section>
