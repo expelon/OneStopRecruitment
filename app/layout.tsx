@@ -5,17 +5,18 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://onestoprecruitment.ca'),
   title: 'OneStopRecruitment - Your Trusted Staffing Partner | Find Jobs & Hire Talent',
   description: 'Leading staffing agency connecting talented professionals with top employers across industries. Browse job opportunities or find the perfect candidates for your business.',
   keywords: 'staffing agency, recruitment, job search, hiring, employment, career opportunities, Toronto, Ontario, Canada',
   openGraph: {
     title: 'OneStopRecruitment - Your Trusted Staffing Partner',
     description: 'Connecting talented professionals with leading employers across industries.',
-    url: 'https://onestoprecruitment.ca',
+    url: '/',
     siteName: 'OneStopRecruitment',
     images: [
       {
-        url: 'https://onestoprecruitment.ca/og-image.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'OneStopRecruitment - Your Trusted Staffing Partner',
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     description: 'Connecting talented professionals with leading employers across industries.',
     images: [
       {
-        url: 'https://onestoprecruitment.ca/og-image.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'OneStopRecruitment - Your Trusted Staffing Partner',
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code',
   },
   alternates: {
-    canonical: 'https://onestoprecruitment.ca',
+    canonical: '/',
   },
 };
 
