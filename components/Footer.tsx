@@ -14,7 +14,7 @@ export default function Footer() {
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Your trusted partner in connecting talent with opportunity. Building successful careers and
-              thriving businesses since 2009.
+              thriving businesses.
             </p>
             <div className="flex space-x-4">
               <a

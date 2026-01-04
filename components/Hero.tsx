@@ -29,7 +29,7 @@ export default function Hero() {
                 Find a Job
               </Link>
               <Link
-                href="#services"
+                href="/employers#start-hiring"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-400 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-200 border-2 border-orange-400 hover:border-orange-500"
               >
                 Hire Talent
