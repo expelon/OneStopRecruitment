@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Briefcase, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -16,36 +16,6 @@ export default function Footer() {
               Your trusted partner in connecting talent with opportunity. Building successful careers and
               thriving businesses.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="p-2 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           <div>
