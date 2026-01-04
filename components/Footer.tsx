@@ -148,13 +148,13 @@ export default function Footer() {
               © {new Date().getFullYear()} OneStopRecruitment. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <Link href="#" className="hover:text-blue-400 transition-colors">
+              <Link href="/privacy-policy" className="hover:text-blue-400 transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#" className="hover:text-blue-400 transition-colors">
+              <Link href="/terms-of-service" className="hover:text-blue-400 transition-colors">
                 Terms of Service
               </Link>
-              <Link href="#" className="hover:text-blue-400 transition-colors">
+              <Link href="/cookie-policy" className="hover:text-blue-400 transition-colors">
                 Cookie Policy
               </Link>
             </div>
