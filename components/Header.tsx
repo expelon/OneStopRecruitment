@@ -13,6 +13,7 @@ export default function Header() {
     { name: 'Home', href: '/' },
     { name: 'Job Seekers', href: '/job-seekers' },
     { name: 'Employers', href: '/employers' },
+    { name: 'Cleaners & Renovators', href: '/cleaners-renovators' },
     { name: 'Current Openings', href: '/current-openings' },
     { name: 'About Us', href: '/about-us' },
   ];
@@ -39,7 +40,7 @@ export default function Header() {
             )}
           </button>
 
-          <div className="hidden md:flex items-center justify-center space-x-1 lg:space-x-2 flex-1">
+          <div className="hidden md:flex items-center justify-center space-x-0 flex-1">
             {navLinks.map((link) => (
               <Link
                 key={link.name}

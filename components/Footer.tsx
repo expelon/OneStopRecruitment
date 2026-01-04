@@ -67,6 +67,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/cleaners-renovators" className="hover:text-blue-400 transition-colors">
+                  Cleaners & Renovators
+                </Link>
+              </li>
+              <li>
                 <Link href="/current-openings" className="hover:text-blue-400 transition-colors">
                   Current Openings
                 </Link>
