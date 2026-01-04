@@ -2,41 +2,9 @@
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, User, Briefcase } from 'lucide-react';
 
 export default function ContactUsPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for contacting us! We will get back to you soon.');
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: ''
-    });
-  };
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -67,7 +35,14 @@ export default function ContactUsPage() {
                     Send us a <span className="text-blue-600">Message</span>
                   </h3>
                   
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form 
+                    action="https://formsubmit.co/farook@theonestoprecruitment.com" 
+                    method="POST"
+                    className="space-y-6"
+                  >
+                    <input type="hidden" name="_subject" value="New Contact Form Submission from OneStop Recruitment" />
+                    <input type="hidden" name="_template" value="table" />
+                    
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -79,8 +54,6 @@ export default function ContactUsPage() {
                             type="text"
                             id="name"
                             name="name"
-                            value={formData.name}
-                            onChange={handleInputChange}
                             required
                             className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             placeholder="John Doe"
@@ -98,8 +71,6 @@ export default function ContactUsPage() {
                             type="email"
                             id="email"
                             name="email"
-                            value={formData.email}
-                            onChange={handleInputChange}
                             required
                             className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             placeholder="john@example.com"
@@ -119,8 +90,6 @@ export default function ContactUsPage() {
                             type="tel"
                             id="phone"
                             name="phone"
-                            value={formData.phone}
-                            onChange={handleInputChange}
                             className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             placeholder="+1 (416) 123-4567"
                           />
@@ -134,8 +103,6 @@ export default function ContactUsPage() {
                         <select
                           id="service"
                           name="service"
-                          value={formData.service}
-                          onChange={handleInputChange}
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         >
                           <option value="">Select a service</option>
@@ -159,8 +126,6 @@ export default function ContactUsPage() {
                         <textarea
                           id="message"
                           name="message"
-                          value={formData.message}
-                          onChange={handleInputChange}
                           required
                           rows={5}
                           className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
@@ -193,8 +158,7 @@ export default function ContactUsPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                      <p className="text-gray-600">+1 (416) 123-4567</p>
-                      <p className="text-gray-500 text-sm">Mon-Fri: 9:00 AM - 6:00 PM</p>
+                      <p className="text-gray-600">647-703-3349</p>
                     </div>
                   </div>
 
@@ -204,8 +168,7 @@ export default function ContactUsPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                      <p className="text-gray-600">info@onestoprecruitment.ca</p>
-                      <p className="text-gray-500 text-sm">We respond within 24 hours</p>
+                      <p className="text-gray-600">farook@theonestoprecruitment.com</p>
                     </div>
                   </div>
 
@@ -215,9 +178,8 @@ export default function ContactUsPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Office</h4>
-                      <p className="text-gray-600">123 Business Ave, Suite 100</p>
-                      <p className="text-gray-600">Toronto, ON M5V 2T6</p>
-                      <p className="text-gray-500 text-sm">Canada</p>
+                      <p className="text-gray-600">8 Park Road</p>
+                      <p className="text-gray-600">Toronto, Ontario M4W 3S5</p>
                     </div>
                   </div>
 
