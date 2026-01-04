@@ -12,7 +12,7 @@ export default function Header() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Job Seekers', href: '/job-seekers' },
-    { name: 'Employers', href: '#services' },
+    { name: 'Employers', href: '/employers' },
     { name: 'Current Openings', href: '/current-openings' },
     { name: 'About Us', href: '/about-us' },
   ];
