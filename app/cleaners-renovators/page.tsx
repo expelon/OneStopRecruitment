@@ -329,14 +329,14 @@ export default function CleanersRenovatorsPage() {
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   Get Started <span className="text-amber-300">Today</span>
                 </h2>
-                <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed mb-10">
+                <p className="text-base text-blue-100 max-w-3xl mx-auto leading-relaxed mb-10">
                   Looking for dependable cleaners or renovation workers? <br />
                   Contact us today to discuss your needs and receive a customized service plan tailored to your requirements.
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <Link href="/contact-us" className="group relative inline-flex items-center px-10 py-5 bg-white text-blue-600 font-bold text-lg rounded-2xl hover:bg-amber-50 transition-all duration-300 shadow-xl hover:shadow-2xl">
+                <Link href="/contact-us" className="group relative inline-flex items-center px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-white text-blue-600 font-bold text-sm sm:text-base lg:text-lg rounded-xl sm:rounded-2xl hover:bg-amber-50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                   <span className="relative z-10 group-hover:text-white transition-colors duration-300">Contact Us Now</span>
                   <svg className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300 relative z-10 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
