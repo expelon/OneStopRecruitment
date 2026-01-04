@@ -4,9 +4,16 @@ import { useState, useEffect, useRef } from 'react';
 
 export default function Statistics() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted || !sectionRef.current) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -15,20 +22,48 @@ export default function Statistics() {
         }
       },
       {
-        threshold: 0.3, // Trigger when 30% of the section is visible
+        threshold: 0.1, // Lower threshold to trigger earlier
+        rootMargin: '0px 0px -100px 0px' // Start animation when section is 100px from viewport
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    observer.observe(sectionRef.current);
 
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []);
+  }, [isMounted]);
+
+  // Fallback: if page is already loaded and section is in viewport, start animation immediately
+  useEffect(() => {
+    if (!isMounted || !sectionRef.current) return;
+
+    const checkIfInViewport = () => {
+      if (!sectionRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+      
+      if (isInViewport && !isVisible) {
+        setIsVisible(true);
+      }
+    };
+
+    // Check immediately
+    checkIfInViewport();
+    
+    // Also check on scroll as a fallback
+    const handleScroll = () => {
+      checkIfInViewport();
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isMounted, isVisible]);
 
   const useCounter = (end: number, duration: number = 2000) => {
     const [count, setCount] = useState(0);
